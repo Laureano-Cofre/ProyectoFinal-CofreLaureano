@@ -1,0 +1,10 @@
+[
+    {"id": 1, "nombre": "DW Drum", "modelo":"Collector", "precio" : 150000, "imagen" : "./img/dw.png"},
+    {"id": 2, "nombre": "Gretsch Drum", "modelo":"Catalina Maple","precio" : 200000, "imagen" : "./img/gretsch.jpg"},
+    {"id": 3, "nombre": "Mapex Drum", "modelo":"Saturn","precio" : 250000, "imagen" : "./img/mapex.jpg"},
+    {"id": 4, "nombre": "Pearl Drum", "modelo":"Master Maple","precio" : 150000, "imagen" : "./img/pearl.jpg"},
+    {"id": 5, "nombre": "Sonor Drum", "modelo":"Bop Maple","precio" : 200000, "imagen" : "/img/sonor.jpg"},
+    {"id": 6, "nombre": "Tama Drum", "modelo":"Star Classic","precio" : 250000, "imagen" : "./img/tama.png"},
+    {"id": 7, "nombre": "Yamaha Drum", "modelo":"Rydeen","precio" : 250000, "imagen" : "./img/yamaha.jpg"},
+    {"id": 8, "nombre": "Ludwig Drum", "modelo":"Epic","precio" : 250000, "imagen" : "./img/ludwig.jpg"}
+]

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+<!-- Fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;700&display=swap" rel="stylesheet">
+<!-- Íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- Sweet alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+    <title>Fetch</title>
+
+</head>
+<body>
+<!-- Nav Bar -->
+  <header class="header">
+    <nav class="nav">
+          <a href="./index.html" class="logo nav-link">Creedence's Drum House</a>
+          <button class="nav-toggle" aria-label="Abrir menú">
+            <i class="fas fa-bars"></i>
+          </button>
+<!-- Carrito -->
+    <button id="boton-carrito"><i class="fa-solid fa-drum"></i><span id="contadorCarrito">  0</span></button>
+      <div class="contenedorCarrito">
+        <div class="modal-carrito">
+            <h3>Carrito</h3>
+            <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+            <div id="carrito-contenedor">
+            </div>
+            <p class="precioProducto">Total de la compra: $<span id="totalCompra">0</span></p>
+           <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito </button>
+           <button id="finalizar-compra" class="boton-agregar"><a href="./formulario.html">Finalizar Compra</a></button>
+        </div>
+      </div>
+    </nav>
+  </header>
+<!-- Título -->
+      <main>
+        <h1 class="text-dark h1 text-center animate__animated animate__fadeInDown">Nuestras Baterías</h1>      
+      </main>
+
+<!-- Tarjetas -->
+    <div class="contenedor-drums">
+
+    </div>
+    
+<!-- Fin tarjetas -->
+
+
+<!-- Formulario -->
+<!--     <section class="form-contact">
+    
+      <form action="" class="contact" method="POST">
+        <label for="nombres">Nombres</label>
+        <input class="nombre" type="text" name="nombres" id="nombres">
+    
+        <label for="correo">Correo</label>
+        <input class="correo" type="text" name="correo" id="correo">
+    
+        <label for="nombres">Celular</label>
+        <input class="celular" type="text" name="celular" id="celular">
+    
+        <label for="mensaje">Mensaje</label>
+        <textarea name="mensaje" id="mensaje"></textarea>
+        <input class="mensaje" type="submit" value="Enviar">
+    
+      </form>
+    </section> -->
+<!-- Fin Formulario -->
+
+<!-- Scripts -->
+    <script defer src="modalcarrito.js"></script>
+    <script src="./app.js"></script>
+<!-- Animaciones -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+</body>
+
+</html>

@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+  }
+  
+  body {
+    font-family: sans-serif;
+    padding: 90px 20px 0;
+  }
+  
+  /* Comienzo de Nab Var */
+  .header {
+    background-color: rgb(7, 105, 233);
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    
+    left: 0;
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: space-between;
+  
+    max-width: 992px;
+    margin: 0 auto;
+  }
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .logo {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 80px;
+  }
+  
+  .nav-menu {
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+  }
+  
+  .nav-menu-item {
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 80px;
+    text-transform: uppercase;
+    width: max-content;
+  }
+  
+  .nav-menu-link {
+    padding: 8px 12px;
+    border-radius: 3px;
+  }
+  
+  .nav-menu-link:hover,
+  .nav-menu-link_active {
+    background-color: #034574;
+    transition: 0.5s;
+  }
+  
+  /* Toggle */
+  .nav-toggle {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    cursor: pointer;
+  
+    display: none;
+  }
+  
+  /* Vista movile */
+  @media (max-width: 768px) {
+    body {
+      padding-top: 70px;
+    }
+  
+    .header {
+      height: 60px;
+    }
+  
+    .logo {
+      font-size: 25px;
+      padding: 0 20px;
+      line-height: 60px;
+    }
+  
+    .nav-menu {
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      background-color: #2c3e50;
+      position: fixed;
+      top: 60px;
+      width: 100%;
+      padding: 20px 0;
+  
+      height: calc(100% - 60px);
+      overflow-y: auto;
+  
+      left: 100%;
+      transition: left 0.3s;
+    }
+  
+    .nav-menu-item {
+      line-height: 70px;
+    }
+  
+    .nav-menu-link:hover,
+    .nav-menu-link_active {
+      background: none;
+      color: #83c5f7;
+    }
+  
+    .nav-toggle {
+      display: block;
+    }
+  
+    .nav-menu_visible {
+      left: 0;
+    }
+  
+    .nav-toggle:focus:not(:focus-visible) {
+      outline: none;
+    }
+  }
+
+  /* Final Nav Bar */
+
+  
+  /*Tarjetas*/
+.contenedor-drums{
+  background:white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;   /*fracciones  repeat(6, 1fr) */
+  grid-template-rows: 550px 300px 100px;
+/*     gap: 10px; /* valores de separación o calles */ 
+  column-gap: 20px;
+/*     row-gap: 1500xp; */
+
+}
+
+.contenedor-drums .contenedor .box{
+  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  border-radius: 5px;
+  background: #fff;
+  text-align: center;
+  padding:30px 20px;
+
+}
+
+.contenedor-drums .contenedor .box img{
+  height: 200px;
+}
+
+.contenedor-drums .contenedor .box h3{
+  color:#444;
+  font-size: 22px;
+  padding:10px 0;
+}
+
+.contenedor-drums .contenedor .box p{
+  color:#777777;
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+.contenedor-drums .contenedor .box .boton-agregar{
+  margin-top: 10px;
+  display: inline-block;
+  background:#333;
+  color:#fff;
+  font-size: 17px;
+  border-radius: 5px;
+  padding: 8px 25px;
+}
+
+.contenedor-drums .contenedor .box .boton-agregar:hover{
+  letter-spacing: 1px;
+}
+
+.contenedor-drums .contenedor .box .boton-agregar:hover{
+  box-shadow: 0 10px 15px rgba(0,0,0,.3);
+  transform: scale(1.03);
+}
+
+@media (max-width:768px){
+  .contenedor{
+      padding:20px;
+  }
+}
+
+/* Final Tarjetas */
+
+/* Carrito */
+
+#boton-carrito {
+    border: none;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    background-color: rgb(7, 105, 233);
+    padding: 10px 20px;
+    transition: all .3s;
+  }
+#boton-carrito:hover {
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+/*     background-color: rgb(255, 255, 255); */
+}
+#boton-carrito:focus {
+    outline: none;
+}
+
+#contenedor-productos {
+    max-width: 1200px;
+    margin: 60px auto;
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+}
+  .contenedorCarrito {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-carrito {
+    position: relative;
+    background-color: white;
+    min-width: 500px;
+    padding: 20px;
+    margin-top: -100%;
+    transition: all .5s;
+}
+
+.modal-active .modal-carrito {
+    margin-top: 0;
+}
+
+.modal-carrito h3 {
+    color:  rgb(235, 78, 78);
+    font-size:xx-large;
+    padding-bottom: 5px;
+}
+.modal-carrito #carritoCerrar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    color:  rgb(235, 78, 78);
+    border: none;
+    background-color: white;
+}
+.modal-carrito #carritoCerrar:hover {
+    cursor: pointer;
+}
+.modal-carrito #carritoCerrar:focus {
+    outline: none;
+}
+
+.modal-carrito #finalizar-compra {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    font-size: xx-large;
+    color:  rgb(13, 110, 253);
+    border: none;
+    background-color: white;
+}
+.modal-carrito #finalizar-compra:hover {
+    cursor: pointer;
+}
+.modal-carrito #finalizar-comprar:focus {
+    outline: none;
+}
+
+.modal-carrito .precioProducto {
+    padding-top: 10px;
+    
+}
+#vaciar-carrito {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    background-color: rgb(13, 110, 253);
+    padding: 10px 20px;
+    transition: all .3s;
+}
+#vaciar-carrito:hover{
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0,0,0);
+}
+
+/* Final Carrito */
+
+/* Formulario */
+.form-contact {
+
+  position: relative;
+  top: 20%;
+  left: 20%;
+}
+
+.contact {
+  padding: 8rem;
+  overflow: hidden;
+  color: gray;
+  
+}
+
+.contact label, .contact input, .contact textarea {
+  display: block;
+  width: 50%;
+  margin-bottom: 5px;
+
+}
+
+/* Final formulario */
+
+/* Título */
+h1 {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+h4 {
+  text-align: center;
+}
+/* Final Título */
