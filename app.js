@@ -185,7 +185,7 @@ botonFinalizarCompra.addEventListener('click', () => {
     
   Swal.fire({
     title: '¡Gracias por tu compra!',
-    text: 'Completa el formulario de denajo y nos pondremos en contacto.',
+    text: 'Completa el formulario de debajo y nos pondremos en contacto.',
     imageUrl: 'https://cdn.aarp.net/content/dam/aarp/entertainment/music/2019/10/1140-ringo-starr-esp.imgcache.rev.web.700.403.jpg',
     imageWidth: 400,
     imageHeight: 200,
