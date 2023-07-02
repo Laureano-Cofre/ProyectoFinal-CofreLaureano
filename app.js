@@ -6,7 +6,6 @@ const contadorCarrito = document.getElementById('contadorCarrito')
 const cantidad = document.getElementById('cantidad')
 const precioTotal = document.getElementById('totalCompra')
 const cantidadTotal = document.getElementById('cantidadTotal')
-let data = []; // Inicialmente, data es un array vacío
 
 
 //////////////////////Nav Bar
@@ -15,7 +14,7 @@ const navMenu = document.querySelector(".nav-menu");
 
 navToggle.addEventListener("click", () => {
   navMenu.classList.toggle("nav-menu_visible");
-
+  
   if (navMenu.classList.contains("nav-menu_visible")) {
     navToggle.setAttribute("aria-label", "Cerrar menú");
   } else {
@@ -25,6 +24,7 @@ navToggle.addEventListener("click", () => {
 
 
 ///////////////////Carrito vacío
+let data = []; 
 let carrito = []
 
 ///////////////////Transformo JSON a objeto JS
@@ -72,7 +72,7 @@ const pedirDatos = async()=>{
             agregarAlCarrito(producto.id)
     
         })
-    })
+    });
 } catch (error) {
   console.log('Error al obtener los datos:', error);
 }
@@ -96,7 +96,7 @@ const agregarAlCarrito = (prodId) => {
     });
   } else {
     const item = data.find(prod => prod.id === prodId);
-    carrito.push({...item, cantidad: 1}); // Añade la propiedad 'cantidad' al objeto item
+    carrito.push({...item, cantidad: 1});
   }
 
   actualizarCarrito();
@@ -161,13 +161,14 @@ const inputEmail = document.querySelector(".correo")
 const inputCelular = document.querySelector(".celular")
 const inputMensaje = document.querySelector("#mensaje")
 
+
 formulario.addEventListener("submit", validarFormulario)
 
-function validarFormulario(e) {
+function validarFormulario(e){
     e.preventDefault()
     
     console.log(`Nombre del usuario: ${inputName.value}, correo: ${inputEmail.value}, número de celular: ${inputCelular.value}, y su mensaje es: ${inputMensaje.value}`);
-
+/* 
     Swal.fire({
       title: '¡Gracias por tu compra!',
       text: 'Nos pondremos en contacto.',
@@ -175,6 +176,20 @@ function validarFormulario(e) {
       imageWidth: 400,
       imageHeight: 200,
       imageAlt: 'Custom image',
-    })
+    }) */
 }
 
+const botonFinalizarCompra = document.querySelector("#finalizar-compra")
+
+botonFinalizarCompra.addEventListener('click', () => {
+    
+  Swal.fire({
+    title: '¡Gracias por tu compra!',
+    text: 'Completa el formulario de denajo y nos pondremos en contacto.',
+    imageUrl: 'https://cdn.aarp.net/content/dam/aarp/entertainment/music/2019/10/1140-ringo-starr-esp.imgcache.rev.web.700.403.jpg',
+    imageWidth: 400,
+    imageHeight: 200,
+    imageAlt: 'Custom image',
+
+})
+})

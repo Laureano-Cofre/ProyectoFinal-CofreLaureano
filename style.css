@@ -141,12 +141,9 @@
 .contenedor-drums{
   background:white;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;   /*fracciones  repeat(6, 1fr) */
+  grid-template-columns: 1fr 1fr 1fr 1fr; 
   grid-template-rows: 550px 300px 100px;
-/*     gap: 10px; /* valores de separación o calles */ 
   column-gap: 20px;
-/*     row-gap: 1500xp; */
-
 }
 
 .contenedor-drums .contenedor .box{
@@ -284,7 +281,7 @@
     position: absolute;
     bottom: 15px;
     right: 15px;
-    font-size: xx-large;
+    font-size: x-large;
     color:  rgb(13, 110, 253);
     border: none;
     background-color: white;

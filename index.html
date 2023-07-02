@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <!-- Sweet alert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
-    <title>Fetch</title>
+    <title>Creedence's Drum House</title>
 
 </head>
 <body>
@@ -33,7 +33,7 @@
             </div>
             <p class="precioProducto">Total de la compra: $<span id="totalCompra">0</span></p>
            <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito </button>
-           <button id="finalizar-compra" class="boton-agregar"><a href="./formulario.html">Finalizar Compra</a></button>
+           <button id="finalizar-compra" class="boton-agregar"><!-- <a href="./formulario.html"> -->Finalizar Compra<!-- </a> --></button>
         </div>
       </div>
     </nav>
@@ -49,29 +49,30 @@
     </div>
     
 <!-- Fin tarjetas -->
-
-
+<br><br>
 <!-- Formulario -->
-<!--     <section class="form-contact">
-    
-      <form action="" class="contact" method="POST">
-        <label for="nombres">Nombres</label>
-        <input class="nombre" type="text" name="nombres" id="nombres">
-    
-        <label for="correo">Correo</label>
-        <input class="correo" type="text" name="correo" id="correo">
-    
-        <label for="nombres">Celular</label>
-        <input class="celular" type="text" name="celular" id="celular">
-    
-        <label for="mensaje">Mensaje</label>
-        <textarea name="mensaje" id="mensaje"></textarea>
-        <input class="mensaje" type="submit" value="Enviar">
-    
-      </form>
-    </section> -->
-<!-- Fin Formulario -->
+<h1 class="text-dark h1 text-center animate__animated animate__fadeInDown">Completa con tus datos.</h1>
+<h4>Nos comunicaremos con vos para coordinar el pago y retiro de los productos.</h4> 
 
+<section class="form-contact">
+    
+  <form action="" class="contact" method="POST">
+    <label for="nombres">Nombres</label>
+    <input class="nombre" type="text" name="nombres" id="nombres">
+
+    <label for="correo">Correo</label>
+    <input class="correo" type="text" name="correo" id="correo">
+
+    <label for="nombres">Celular</label>
+    <input class="celular" type="text" name="celular" id="celular">
+
+    <label for="mensaje">Mensaje</label>
+    <textarea name="mensaje" id="mensaje"></textarea>
+    <input class="mensaje" type="submit" value="Enviar">
+    
+  </form>
+</section>
+<!-- Fin Formulario -->
 <!-- Scripts -->
     <script defer src="modalcarrito.js"></script>
     <script src="./app.js"></script>
